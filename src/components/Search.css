@@ -1,3 +1,18 @@
-div {
-    border: 25px solid black;
+.NAV{    
+background-color: #4287f5;
+padding: 1% 0px 1% 8px;
+}
+.NAV input:first-child{
+background-color: #4287f5;
+height: 25px;
+border-style: none;
+color: wheat;
+font-family: 'Raleway';
+}
+.NAV input:last-child{
+margin-left: 5px;
+background-color: #3566b5;
+border-style: none;
+padding: 15px 10px 15px 10px;
+font-family: 'Raleway';
 }

@@ -1,0 +1,10 @@
+img{width: 75px;}
+.DailyDesc div{flex-basis: 14%;}
+.DailyDesc{ 
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+width: 80%;
+margin: 5% auto;
+text-align: center;
+}
