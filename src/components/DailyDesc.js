@@ -5,47 +5,26 @@ import cloudy from "../img/weather-icons/partlycloudy.svg";
 
 class DailyDesc extends React.Component {
 
-  render() {
-    return (
-      <div className="DailyDesc">
-      <div>
-            <p>03:00 </p>
-            <img src={cloudy} />
-            <p>8°C</p>
-      </div>
-      <div>
-            <p>06:00 </p>
-            <img src={cloudy}  />
-            <p>9°C</p>
-      </div>
-      <div>
-            <p>09:00 </p>
-            <img src={clear}  />
-            <p>14°C</p>
-      </div>
-      <div>
-            <p>12:00 </p>
-            <img src={clear}  />
-            <p>17°C</p>
-      </div>
-      <div>
-            <p>15:00 </p>
-            <img src={clear} />
-            <p>18°C</p>
-      </div>
-      <div>
-            <p>18:00 </p>
-            <img src={clear}  />
-            <p>16°C</p>
-      </div>
-      <div>
-            <p>21:00 </p>
-            <img src={cloudy}  />
-            <p>13°C</p>
-      </div>
-</div>
-    );
-  }
+      render() {
+            let { data } = this.props;
+            console.log(data);
+            return (
+
+                  <div className="DailyDesc">
+
+                        {data.list.map((w, i) => {
+                              if (i < 7)
+                                    return <div>
+                                          <p>{w.dt_txt.substring(10)}</p>
+                                          <img src={cloudy} />
+                                          <p>{parseInt(w.main.temp- 273.15)}°C</p>
+                                    </div>
+                        })}
+
+
+                  </div>
+            );
+      }
 }
 export default DailyDesc;
 
