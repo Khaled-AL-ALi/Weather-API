@@ -17,11 +17,12 @@ class App extends Component {
   handleInputChange = value => {this.setState({ name: value });};
 
   render() {
+  
     
     return (
 
       <div className="app">
-            <div><Search /></div>   
+            <div><Search/></div>   
             <div><BigDesc /></div>
             <div><DailyDesc data={FakeWeather}/></div>
            
