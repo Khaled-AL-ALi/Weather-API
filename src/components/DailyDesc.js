@@ -12,12 +12,12 @@ class DailyDesc extends React.Component {
 
                   <div className="DailyDesc">
 
-                        {data.list.map((w, i) => {
+                        {data.list && data.list.length > 0 && data.list.map((w, i) => {
                               if (i < 7)
                                     return <div>
                                           <p>{w.dt_txt.substring(10)}</p>
                                           <img src={cloudy} />
-                                          <p>{parseInt(w.main.temp- 273.15)}°C</p>
+                                          <p>{parseInt(w.main.temp - 273.15)}°C</p>
                                     </div>
                         })}
 
